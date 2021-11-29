@@ -13,9 +13,13 @@
 		CC3106FC275510C0001D5B69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3106FA275510C0001D5B69 /* Main.storyboard */; };
 		CC3106FE275510C1001D5B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC3106FD275510C1001D5B69 /* Assets.xcassets */; };
 		CC310701275510C1001D5B69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3106FF275510C1001D5B69 /* LaunchScreen.storyboard */; };
+		CD7AD8B5E7F336577BDA0155 /* Pods_ImageFilter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B498FB555E8BDFA60207DAF /* Pods_ImageFilter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15E23EB3427B823A259DC1DC /* Pods-ImageFilter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageFilter.debug.xcconfig"; path = "Target Support Files/Pods-ImageFilter/Pods-ImageFilter.debug.xcconfig"; sourceTree = "<group>"; };
+		17EDD1B57C8F4D4FF6B25EE7 /* Pods-ImageFilter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageFilter.release.xcconfig"; path = "Target Support Files/Pods-ImageFilter/Pods-ImageFilter.release.xcconfig"; sourceTree = "<group>"; };
+		1B498FB555E8BDFA60207DAF /* Pods_ImageFilter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageFilter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3106F1275510C0001D5B69 /* ImageFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3106F4275510C0001D5B69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC3106F6275510C0001D5B69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7AD8B5E7F336577BDA0155 /* Pods_ImageFilter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C2FC0A7B00E278C87E4634E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B498FB555E8BDFA60207DAF /* Pods_ImageFilter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C030637EA45620CABFE164D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15E23EB3427B823A259DC1DC /* Pods-ImageFilter.debug.xcconfig */,
+				17EDD1B57C8F4D4FF6B25EE7 /* Pods-ImageFilter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CC3106E8275510C0001D5B69 = {
 			isa = PBXGroup;
 			children = (
 				CC3106F3275510C0001D5B69 /* ImageFilter */,
 				CC3106F2275510C0001D5B69 /* Products */,
+				C030637EA45620CABFE164D6 /* Pods */,
+				3C2FC0A7B00E278C87E4634E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC310705275510C1001D5B69 /* Build configuration list for PBXNativeTarget "ImageFilter" */;
 			buildPhases = (
+				B9B6ADAEADDBC56F0E1FAE03 /* [CP] Check Pods Manifest.lock */,
 				CC3106ED275510C0001D5B69 /* Sources */,
 				CC3106EE275510C0001D5B69 /* Frameworks */,
 				CC3106EF275510C0001D5B69 /* Resources */,
+				288D0A15688AD005E4E66F60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		288D0A15688AD005E4E66F60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageFilter/Pods-ImageFilter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageFilter/Pods-ImageFilter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageFilter/Pods-ImageFilter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9B6ADAEADDBC56F0E1FAE03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageFilter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CC3106ED275510C0001D5B69 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		CC310706275510C1001D5B69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E23EB3427B823A259DC1DC /* Pods-ImageFilter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		CC310707275510C1001D5B69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EDD1B57C8F4D4FF6B25EE7 /* Pods-ImageFilter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
